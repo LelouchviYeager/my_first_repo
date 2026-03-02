@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Snake (Flask)</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Snake Game</h1>
+    <div class="controls">
+      <button id="playBtn">Play</button>
+      <button id="restartBtn" class="hidden">Restart</button>
+      <button id="instructionsBtn">Instructions</button>
+      <div class="scores">
+        <span>Score: <span id="score">0</span></span>
+        <span>High Score: <span id="highScore">0</span></span>
+      </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="overlay" class="overlay hidden">
+      <div class="overlay-content" id="overlayContent"></div>
+    </div>
+
+    <div id="instructions" class="modal hidden">
+      <div class="modal-content">
+        <h2>How to play</h2>
+        <ul>
+          <li>Use the arrow keys to move the snake.</li>
+          <li>Eat the red apples to grow longer and increase your score.</li>
+          <li>Avoid hitting the walls or the snake's own body.</li>
+          <li>The game is played on a 15 × 15 grid and moves at 1 cell per second.</li>
+        </ul>
+        <button id="closeInstructions">Close</button>
+      </div>
+    </div>
+
+    <p class="note">Small security note: this demo does not include antivirus software. Run it locally in a secure environment.</p>
+  </div>
+
+  <script src="/static/game.js"></script>
+</body>
+</html>
